@@ -7,5 +7,3 @@ $msg = <<<EOM
 EOM;
 
 echo $msg . PHP_EOL;
-
-
