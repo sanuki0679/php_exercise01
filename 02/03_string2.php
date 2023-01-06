@@ -1,10 +1,11 @@
 <?php
 
-$msg = '山へ、柴刈りに';
-$msg1 = '行きたくて';
-$msg2 = 'うずうずしています｡';
+$msg = <<<EOM
+山へ、柴刈りに
+行きたくて
+うずうずしています｡
+EOM;
 
 echo $msg . PHP_EOL;
-echo $msg1 . PHP_EOL;
-echo $msg2 . PHP_EOL;
+
 
