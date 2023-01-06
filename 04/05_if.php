@@ -12,7 +12,10 @@ for ($j = 2; $j < $num; $j++) {
         break;
     }
 }
-if ($point == false) {
+if ($num == 1) {
+    echo $num;
+    echo 'は素数ではありません。' . "\n";
+} elseif ($point == false) {
     echo $num;
     echo 'は素数です。' . PHP_EOL;
 }
