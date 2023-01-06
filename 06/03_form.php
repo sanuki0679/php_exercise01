@@ -26,8 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>POSTメソッド</h1>
     <form action="" method="post">
         <div>
-            
-            <?php if ($err_msg): ?>
+
+            <?php if ($err_msg) : ?>
                 <ul>
                     <li><?= $err_msg ?></li>
                 </ul>
@@ -40,8 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </form>
     <div>
-        <?php if ($msg !=''): ?>
-        <a>私は</a><?= htmlspecialchars( $msg, ENT_QUOTES, 'UTF-8') ?><a>歳です</a>
+        <?php if ($msg != '') : ?>
+            <a>私は</a><?= htmlspecialchars($msg, ENT_QUOTES, 'UTF-8') ?><a>歳です</a>
         <?php endif; ?>
     </div>
 </body>

@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div>
             <label for="">年齢</label><br>
             <input type="text" name="message">
-            <?php if ($err_msg): ?>
+            <?php if ($err_msg) : ?>
                 <ul>
                     <li><?= $err_msg ?></li>
                 </ul>
@@ -41,8 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </form>
     <div>
-        <?php if ($msg !=''): ?>
-        <a>私は<?= htmlspecialchars( $msg, ENT_QUOTES, 'UTF-8') ?>歳です</a>        
+        <?php if ($msg != '') : ?>
+            <a>私は<?= htmlspecialchars($msg, ENT_QUOTES, 'UTF-8') ?>歳です</a>
         <?php endif; ?>
     </div>
 </body>
