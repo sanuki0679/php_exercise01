@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="text" name="num2"><br>
             <label for="">3つ目の数字</label><br>
             <input type="text" name="num3"><br>
-
+            
         </div>
         <div>
             <input type="submit" value="送信">

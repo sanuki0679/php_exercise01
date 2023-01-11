@@ -7,7 +7,6 @@ $stylists = [
 ];
 $select_stylist = '';
 
-// ここにコードを追記
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $select_stylist = $_POST['stylist'];
@@ -29,17 +28,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form action="" method="post">
         <select name="stylist">
             // ここにコードを追記
-
             <option value="Takashi">スタイリスト</option>
             <option value="Ken">ハイスタイリスト</option>
             <option value="Kyoutaro">トップスタイリスト</option>
         </select>
-
-
         <br>
         <input type="submit" value="送信">
     </form>
-
+    
     <?php if ($select_stylist != '') : ?>
         <a>あなたの担当は<?= htmlspecialchars($select_stylist, ENT_QUOTES, 'UTF-8') ?>です</a>
     <?php endif; ?>
