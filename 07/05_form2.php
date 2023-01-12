@@ -31,6 +31,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($email)) {
         $err_msgs[] = 'メールアドレスを入力してください。';
     }
+    if ((!empty($name)) && (!empty($tel)) && (!empty($email))) {
+
+        header("Location: 05_confirm.php?$selected_key=".$selected_key);
+        exit();
+    }
 }
 ?>
 
