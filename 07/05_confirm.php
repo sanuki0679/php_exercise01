@@ -7,7 +7,7 @@ $prices = [
     'ネックレス' => 9000,
     'ピアス' => 10000
 ];
-$selected_key = '';
+//$selected_key = '';
 // コードを追記
 
 $selected_key = $_GET['selected_key'];
@@ -25,8 +25,8 @@ $selected_key = $_GET['selected_key'];
 
 <body>
     <h2>ご注文ありがとうございます</h2>
-    <?= $selected_key ?>
-    <h2>お支払い金額は、<?= $prices[''] ?> 円です。</h2>
+    
+    <h2>お支払い金額は、<?= $prices[$selected_key] ?> 円です。</h2>
     <a href="05_form2.php">戻る</a>
 </body>
 
