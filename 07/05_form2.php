@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     if ((!empty($name)) && (!empty($tel)) && (!empty($email))) {
 
-        header("Location: 05_confirm.php?selected_key=".$selected_key);
+        header("Location: 05_confirm.php?selected_key=" . $selected_key);
         exit();
     }
 }

@@ -32,12 +32,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </ul>
     <?php endif; ?>
     <?php if (!empty($score)) : ?>
-    <?php if ($score >= 60) : ?>
-        <h1>合格です</h1>
-    <?php endif; ?>
-    <?php if ($score < 60) : ?>
-        <h1>不合格です</h1>
-    <?php endif; ?>
+        <?php if ($score >= 60) : ?>
+            <h1>合格です</h1>
+        <?php endif; ?>
+        <?php if ($score < 60) : ?>
+            <h1>不合格です</h1>
+        <?php endif; ?>
     <?php endif; ?>
 
 

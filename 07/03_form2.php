@@ -9,15 +9,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $err_msg = '点数が入力されていません。';
     }
     if (!empty($score)) {
-    
-    if ($score >= 60) {
-    
-    $judge_ment = '合格です';
 
-    }elseif ($score < 60) {
-    
-    $judge_ment = '不合格です';
-    }
+        if ($score >= 60) {
+
+            $judge_ment = '合格です';
+        } elseif ($score < 60) {
+
+            $judge_ment = '不合格です';
+        }
     }
     if (empty($err_msg)) {
 
