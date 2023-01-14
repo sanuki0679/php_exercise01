@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     // バリデーション
-    if ((is_numeric($num1)) || (is_numeric($num2)) || (is_numeric($num3))) {
+    if ((!(is_numeric($num1)) || !(is_numeric($num2))) || !(is_numeric($num3))) {
         $err_num = '全てに数字を入力してください。';
     }
 }
@@ -54,3 +54,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </body>
 
 </html>
+
