@@ -76,11 +76,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h3>購入するものを選択してください</h3>
 
         <select name="item_key">
-            <?php
-            foreach ($items as $item_key) {
-                echo '<option value="', $item_key, '">', $item_key, '</option>';
-            }
-            ?>
+            <?php foreach ($items as $item_key) : ?>
+                <option value="<?= $item_key ?>"><?= $item_key ?></option>
+
+            <?php endforeach; ?>
 
 
         </select>

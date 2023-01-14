@@ -28,13 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form action="" method="post">
         <select name="stylist">
             // ここにコードを追記
-
-            <?php
-            foreach ($stylists as $stylist => $select_stylist) {
-                echo '<option value="', $select_stylist, '">', $stylist, '</option>';
-            }
-            ?>
-
+            <?php foreach ($stylists as $stylist => $select_stylist) : ?>
+                <option value="<?= $select_stylist ?>"><?= $stylist ?></option>
+            <?php endforeach; ?>
 
 
         </select>
