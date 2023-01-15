@@ -1,22 +1,14 @@
 <?php
 
-
 $msg = '';
 $week = ["日", "月", "火", "水", "木", "金", "土"];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // コードを追記
-
-    $answer = $_POST["answer"];
-
-    if ($answer == "はい") {
-
-        $date = date('Y年m月d日');
-        $msg = '今日は、' . $date . $week[date("w")] . '曜日です<br>'; //　「はい」の時の処理
-    }
+    $date = date('Y年m月d日');
+    $msg = '今日は、' . $date . $week[date("w")] . '曜日です<br>'; //「はい」の時の処理
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="ja">
 
