@@ -11,8 +11,6 @@ function check_temperature($body_temperature)
     // 37度以上の場合はfalse
 }
 
-
-
 function create_message($body_temperature)
 {
     // コードを追記
@@ -22,7 +20,7 @@ function create_message($body_temperature)
     $coment = check_temperature($body_temperature);
     if (($coment == true)) {
         return "あなたは平熱なので、問題なく参加できます";
-    } elseif (($coment == false)) {
+    } else  {
         return "あなたは発熱なので、参加できません";
     }
 }
