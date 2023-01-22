@@ -9,21 +9,16 @@ $taxi1 = new Taxi('クラウンのタクシー', 222, 'black');
 // 2人乗車
 echo $taxi1->pickUp(2);
 echo $taxi1->information();
-$this->passenger;
-
-echo '乗車人数:'. $this->passenger. '人';
 echo "\n";
 
 // 1人乗車
 echo $taxi1->pickUp(1);
 echo $taxi1->information();
-echo '乗車人数:'. $this->passenger .'人';
 echo "\n";
 
 // 2人降車
 echo $taxi1->lower(2);
 echo $taxi1->information();
-echo '乗車人数:'. $this->passenger .'人';
 echo "\n";
 
 // 2人降車
