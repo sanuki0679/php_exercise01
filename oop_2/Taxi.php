@@ -5,36 +5,31 @@ require_once __DIR__ . '/Car.php';
 
 class Taxi extends Car
 {
-    public $passenger;
-    public $passon;
-    public $passoff;
-    public function __construct($name, $number, $color)
-    {
-        parent::__construct($name, $number, $color);
-    }
-    
-    public function pickUp($passon)
-    {
-        $this->passenger = $this->passenger + $this->passon;
-        $this->passon = strval($passon);
+    private $passenger;
 
-        return  "{$this->passon}人乗車しました\n";
-    }
-    public function lower($passoff)
+
+    public function pickUp($passenger)
     {
-        $this->passenger = $this->passenger - $this->passoff;
-        if (($this->passenger - $this->passoff) >= 0) {
-            $this->passoff = strval($passoff);
-            return  "{$this->passoff}人降車しました\n";
+        $this->passenger = $this->passenger + $passenger;
+        $passenger = strval($passenger);
+
+        return  "{$passenger}人乗車しました\n";
+    }
+    public function lower($passenger)
+    {
+        $this->passenger = $this->passenger - $passenger;
+        if ($this->passenger  >= 0) {
+            $passenger = strval($passenger);
+            return  "{$passenger}人降車しました\n";
         }
-        return  "{$this->passoff}人降車できません\n";
+        return  "{$passenger}人降車できません\n";
     }
     public function information()
     {
-       
+
         return '車の車種:' . $this->getName() . "\n" .
             '車体番号:' . $this->getNumber() . "\n" .
             'カラー:' . $this->getColor() . "\n" .
-            '乗車人数:' . $this->passenger . "人\n" ;
+            '乗車人数:' . $this->passenger . "人\n";
     }
 }

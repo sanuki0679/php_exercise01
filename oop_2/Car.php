@@ -49,6 +49,5 @@ class Car
         return '車の車種:' . $this->name . "\n" .
             '車体番号:' . $this->number . "\n" .
             'カラー:' . $this->color . "\n";
-            
     }
 }
